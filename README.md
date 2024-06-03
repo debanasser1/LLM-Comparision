@@ -20,7 +20,7 @@ The application compares the performance of the following LLM models:
    
 4. **Performance Evaluation**: Implemented a mechanism to compare and evaluate the generated outputs from the LLM models using answer relevancy to determine the best-performing model for a given user input.
    
-5. **Real-time Streaming**: Utilized Websockets or Server-Sent Events (SSE) to enable real-time streaming of responses to the frontend, providing a seamless user experience.
+5. **Real-time Streaming**: Utilized Flask SocketIO to enable real-time streaming of responses to the frontend, providing a seamless user experience.
 
 #### Technologies Used:
 - **Backend Language**: Python
