@@ -100,7 +100,7 @@ def query_falcon_40b_instruct(prompt):
     )
     return response.json()['output']
 
-# Function to measure answer relevancy (evaluate the LLM)
+#  measure answer relevancy (evaluate the LLM)
 def measure_relevancy(input_prompt, response, context):
     answer_relevancy_metric = AnswerRelevancyMetric(threshold=0.5)
     test_case = LLMTestCase(input=input_prompt, actual_output=response, retrieval_context=context)
@@ -117,7 +117,7 @@ def print_best_model(scores):
     logging.info(f"Best Model: {best_model['model_name']} with score {best_model['relevancy_score']['score']}")
     return best_model
 
-# Flask endpoint to handle queries and determine the best model
+# flask endpoint to handle queries and determine the best model
 @app.route('/query', methods=['POST'])
 def handle_query():
     user_prompt = request.json['prompt']
